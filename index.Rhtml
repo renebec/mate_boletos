@@ -1,0 +1,248 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>R html prueba</title>
+    <meta name="Propedéutico" content="apuntes de matemáticas"/>
+    <meta name="Author" content="Héctor René Becerril Cejudo"/>
+    <meta name="keywords" content="matemáticas"/>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>
+        <div style="font-size:30px;color:white;
+        line-height:30px;padding-bottom:5px;">
+            &ensp;My class
+            <br>
+        </div>
+        <text style="font-size:30px;padding-left:10px; color:grey;">
+            &emsp;Matemáticas</text>
+    </h1>
+    
+    <h2>
+    <p style ="font-family:tahoma;color:grey;font-size:16px;">
+                by renebec
+            </p>
+    </h2>
+    
+    
+
+
+<!--begin.rcode include=FALSE
+  knitr::opts_chunk$set(fig.width=5, fig.height=5)
+  library(tidyverse)
+
+x = 560 
+y = 320 
+z = 169.5
+
+px = (660/3) * (x*0.5)
+py = (444/3) * (y*0.6)
+pz = (286/2) * (z*0.75)
+
+px
+py
+pz
+
+p = px + py + pz
+
+pt = px+py+pz
+
+vx = (660-220) * x
+vy = (444-148) * y
+vz = (286-143) * z
+
+vt = (vx + vy + vz)
+
+print(vx)
+print(vy)
+print(vz)
+
+tx = (px + vx)
+ty = (py + vy)
+tz = (pz + vz)
+
+t = tx + ty + tz
+t
+  end.rcode-->
+  
+(286-143)*169.5
+  
+<h2>
+Calcule la cantidad de dinero recaudado por la venta de boletos para la Orquesta Filarmónica
+</h2>
+<br>
+Costo de un boleto en Luneta: $560<br>
+Costo de un boleto en Anfiteatro: $320<br>
+Costo de un boleto en Galería: $169.5
+<br>
+<br>
+Número total de asientos en Luneta: 660<br>
+Número total de asientos en Anfiteatro: 444<br>
+Número total de asientos en Galería: 286
+<br>
+<br>
+<p>
+<strong>&emsp;Expresiones para calcular la cantidad de dinero recaudado en preventa:</strong>
+<br>
+<br>
+&emsp;Luneta = [$560 - ($560 * 0.5)] * [2/6(660)]<br>
+&emsp;Anfiteatro = [$320 - ($320 * 0.4)] * [1/3(444)]<br>
+&emsp;Galería = [$169.5 - ($169.5 * 0.25)] * [1/2(286)]
+<br>
+<br>
+<p style=color:grey;font-size:20;>&emsp;Jerarquía de operaciones parte I</p>
+<br>
+&emsp;Cantidad de boletos vendidos en Luneta en preventa:<br>
+&emsp;2/6(660) = 220<br><br>
+&emsp;Cantidad de boletos vendidos en Anfiteatro en preventa:<br>
+&emsp;1/3(444) = 148<br><br>
+&emsp;Cantidad de boletos vendidos en Galería en preventa:<br>
+&emsp;1/2(286) = 143
+<br>
+<br>
+<p style=color:grey;font-size:20;>&emsp;Sustituimos nuestros resultados en las expresiones originales</p>
+<br>
+&emsp;Luneta = [$560 - ($560 * 0.5)] * 220<br>
+&emsp;Anfiteatro = [$320 - ($320 * 0.4)] * 148<br>
+&emsp;Galería = [$169.5 - ($169.5 * 0.25)] * 143
+<br>
+<br>
+<p style=color:grey;font-size:20;>&emsp;Jerarquía de operaciones parte II</p>
+<br>
+&emsp;Descuento aplicado al boleto en Luneta por preventa:<br>
+&emsp;<i>$560 * 0.5 = </i>
+<!--begin.rcode include=FALSE
+560 * 0.5 
+end.rcode-->
+$<b>280</b>
+<br>
+<br>
+&emsp;Descuento aplicado al boleto en Anfiteatro por preventa:<br>
+&emsp;<i>$320 * 0.4 = </i>
+<!--begin.rcode include=FALSE
+320 * 0.4 
+end.rcode-->
+$<b>128</b>
+<br>
+<br>
+&emsp;Descuento aplicado al boleto en Galería por preventa:<br>
+&emsp;<i>$169.5 * 0.25 =</i> 
+<!-- begin.rcode include=FALSE
+169.5 * 0.25
+end.rcode--> 
+$<b>42.375</b>
+<br>
+<br>
+<p style=color:grey;font-size:20;>&emsp;Sustituimos nuestros resultados en las expresiones originales</p>
+<br>
+&emsp;Luneta = [$560 - $280] * 220<br>
+&emsp;Anfiteatro = [$320 - $128] * 148<br>
+&emsp;Galería = [$169.5 - $42.375] * 143
+<br>
+<br>
+<p style=color:grey;font-size:20;>&emsp;Jerarquía de operaciones parte III</p>
+<br>
+&emsp; Costo del boleto en Luneta una vez aplicado el descuento:<br>
+&emsp;<i>$560 - $280 = </i>
+<!--begin.rcode include=FALSE
+560 - 280 
+end.rcode-->
+$<b>280</b>
+<br><br>
+&emsp; Costo del boleto en Anfiteatro una vez aplicado el descuento::<br>
+&emsp;<i>$320 - $128 = </i>
+<!-- begin.rcode include=FALSE
+320 - 128 
+end.rcode-->
+$<b>192</b>
+<br><br>
+&emsp; Costo del boleto en Galería una vez aplicado el descuento:<br>
+&emsp;<i>$169.5 - $42.375 = </i>
+<!-- begin.rcode include=FALSE
+169.5 - 42.375 
+end.rcode-->
+$<b>127.125</b>
+<br>
+<br>
+<p style=color:grey;font-size:20;>&emsp;Sustituimos nuestros resultados en las expresiones originales</p>
+<br>
+&emsp;Luneta = $280 * 220<br>
+&emsp;Anfiteatro = $192 * 148<br>
+&emsp;Galería = $127.125 * 143
+<br>
+<br>
+<p style=color:grey;font-size:20;>&emsp;Jerarquía de operaciones parte IV</p>
+<br>
+&emsp;Dinero recaudado en preventa por venta de boletos en Luneta:<br>
+&emsp;$280 * 220 = 
+<!-- begin.rcode include = FALSE
+format(280 *220, scientific = FALSE) 
+end.rcode-->
+$<b>61,600</b>
+<br><br>
+&emsp;Dinero recaudado en preventa por venta de boletos en Anfiteatro:<br>
+&emsp;$192 * 148 = 
+<!-- begin.rcode include = FALSE
+format(192 * 148, scientific = FALSE) 
+end.rcode-->
+$<b>28,416</b>
+<br><br>
+&emsp;Dinero recaudado en preventa por venta de boletos en Galería:<br>
+&emsp;$127.125 * 143 = 
+<!-- begin.rcode include = FALSE
+format(127.125 * 143, scientific = FALSE)
+end.rcode-->
+$<b>18,178.88</b>
+<br>
+<br>
+<p style=color:grey;font-size:20;font-weight:bold;>&emsp;Recaudación total durante la preventa</p>
+<br>
+&emsp;$61,600 + $28,416 + $18,178.88 = 
+<!-- begin.rcode include = FALSE 
+format(61600 + 28416 + 18178.88, scientific = FALSE, echo = FALSE) 
+end.rcode--> 
+$<b>108,194.9</b>
+<br>
+<br>
+<br>
+<br>
+<b>Cantidad recaudada el día del evento:</b>
+<br>
+<br>
+&emsp; Luneta:<br>
+&emsp;<i>(660-220) * $560 = <br><br>
+&emsp; Anfiteatro:<br>
+&emsp;<i>(444-148) * $___ = <br><br>
+&emsp; Galería:<br>
+&emsp;<i>_________ * $___ = </i>
+<!-- begin.rcode include=FALSE
+format(vz) 
+end.rcode-->
+$<b>24,238.5</b>
+<br><br>
+<p style=color:grey;font-size:20;font-weight:bold;>&emsp;Recaudación total el día del evento</p>
+<br>
+&emsp; Total día del evento =   <br><br>
+</p>
+&emsp;$246,400 + $_______ + $_________ = $_________
+<br>
+<br>
+<br>
+<p style=color:white;font-size:20;font-weight:bold;>Recaudación total (total preventa + total día del evento)</p>
+<p style=color:white;font-weight:bold;>&emsp;$108,194.9 + $_________ = &nbsp;
+<!--begin.rcode include=FALSE
+format(t, scientific=FALSE)
+end.rcode-->
+$__________
+</p>
+<br>
+<br>
+<br>
+ <p style=font-weigth:old;color:green;>¡Éxito muchachos!</p>
+<br>
+<br>
+<br>
+</body>
+</html>
